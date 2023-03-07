@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace GraphSPcopy
 {
@@ -21,9 +22,14 @@ namespace GraphSPcopy
     /// </summary>
     public partial class MainWindow : Window
     {
+        public MainWindow()
+        {
+            InitializeComponent();
+
+            
+        }
+
         
-
-
         public class Elementa
         {
             private double _gradSaut4;
@@ -32,25 +38,25 @@ namespace GraphSPcopy
             private double _gradSaut1;
             private double _gradMaxSaut;
 
-            public double Gradgaut4
+            public double GradSaut4
             {
                 get { return _gradSaut4; }
                 set { _gradSaut4 = value; }
             }
 
-            public double Gradgaut3
+            public double Gradsaut3
             {
                 get { return _gradSaut3; }
                 set { _gradSaut3 = value; }
             }
 
-            public double Gradgaut2
+            public double GradSaut2
             {
                 get { return _gradSaut2; }
                 set { _gradSaut2 = value; }
             }
 
-            public double Gradgaut1
+            public double GradSaut1
             {
                 get { return _gradSaut1; }
                 set { _gradSaut1 = value; }
@@ -63,7 +69,8 @@ namespace GraphSPcopy
 
             }
 
-        } 
+        }
+        Elementa myElementa = new Elementa();
     }
 }
 

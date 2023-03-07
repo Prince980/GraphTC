@@ -73,7 +73,7 @@
 
             </UniformGrid>
             <UniformGrid Rows="10" VerticalAlignment="Stretch" HorizontalAlignment="center">
-            <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15"><Run Text="{Binding GradMaxSaut, StringFormat=\{0:0.00\}}"/><Run Text = "{}"/></TextBlock>
+            <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15"><Run Text="{Binding GradMaxSaut, StringFormat=\{0:0.00\}}"/></TextBlock>
             <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15"><Run Text="{Binding GradSaut4, StringFormat=\{0:0.00\}}"/></TextBlock>
             <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15"><Run Text="{Binding GradSaut3, StringFormat=\{0:0.00\}}"/></TextBlock>
             <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15"><Run Text="{Binding GradSaut2, StringFormat=\{0:0.00\}}"/></TextBlock>
