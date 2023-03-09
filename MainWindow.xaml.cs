@@ -14,19 +14,29 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace GraphSPcopy
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : INotifyPropertyChanged
+
     {
+
+        
+
+        
         public MainWindow()
-        {
-            InitializeComponent();
 
             
+        {
+            DataContext = this;
+            InitializeComponent();
+            
+           
         }
 
         
@@ -38,22 +48,32 @@ namespace GraphSPcopy
             private double _gradSaut1;
             private double _gradMaxSaut;
 
+            private double _plotX;
+            private double _plotY;
+            private double _originX;
+            private double _originY;
+
             public double GradSaut4
             {
                 get { return _gradSaut4; }
-                set { _gradSaut4 = value; }
+                set { _gradSaut4 = value;
+                    OnPropertyChanged();
+                }
             }
 
             public double Gradsaut3
             {
                 get { return _gradSaut3; }
-                set { _gradSaut3 = value; }
+                set { _gradSaut3 = value;
+                    OnPropertyChanged();
+                }
             }
 
             public double GradSaut2
             {
                 get { return _gradSaut2; }
-                set { _gradSaut2 = value; }
+                set { _gradSaut2 = value;
+               }
             }
 
             public double GradSaut1
@@ -69,8 +89,41 @@ namespace GraphSPcopy
 
             }
 
+            public double PlotX
+            {
+                get { return _plotX; }
+                   set { _plotX = value; }
+            }
+
+            public double PlotY
+            {
+                get { return _plotY; }
+                set { _plotY = value; }
+            }
+
+            public double OriginX
+            {
+                get { return _originX; }
+                set { _originX = value; }
+            }
+
+            public double OriginY
+            {
+                get { return _originY; }
+                set
+                {
+                    _originY = value;
+                }
+            }
         }
         Elementa myElementa = new Elementa();
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            var handler = PropertyChanged;
+            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }
 

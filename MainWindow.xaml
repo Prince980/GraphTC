@@ -72,20 +72,22 @@
                 <TextBlock Margin="5,0,0,20" HorizontalAlignment="Right" FontSize="15"></TextBlock>
 
             </UniformGrid>
-        <UniformGrid Rows="10" VerticalAlignment="Stretch" HorizontalAlignment="center"  x:Name ="myElementa">
-            <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15"><Run Text="{Binding GradMaxSaut, StringFormat=\{0:0.00\}}"/></TextBlock>
-            <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15"><Run Text="{Binding myElementa.GradSaut4, StringFormat=\{0:0.00\}}"/></TextBlock>
-            <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15"><Run Text="{Binding myElementa.GradSaut3, StringFormat=\{0:0.00\}}"/></TextBlock>
-            <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15"><Run Text="{Binding myElementa.GradSaut2, StringFormat=\{0:0.00\}}"/></TextBlock>
-            <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15"><Run Text="{Binding myElementa.GradSaut1, StringFormat=\{0:0.00\}}"/></TextBlock>
-            <TextBlock Margin="40,0,0,0" VerticalAlignment="Bottom" FontSize="15"><Run Text="{Binding myElementa.GradSaut1, StringFormat=\{0:0.00\}}"/></TextBlock>
-            <TextBlock Margin="40,0,0,0" VerticalAlignment="Bottom" FontSize="15"><Run Text="{Binding myElementa.GradSaut2, StringFormat=\{0:0.00\}}"/></TextBlock>
-            <TextBlock Margin="40,0,0,0" VerticalAlignment="Bottom" FontSize="15"><Run Text="{Binding myElementa.GradSaut3, StringFormat=\{0:0.00\}}"/></TextBlock>
-            <TextBlock Margin="40,0,0,0" VerticalAlignment="Bottom" FontSize="15"><Run Text="{Binding myElementa.GradSaut4, StringFormat=\{0:0.00\}}"/></TextBlock>
-            <TextBlock Margin="40,0,0,0" VerticalAlignment="Bottom" FontSize="15"><Run Text="{Binding GradMaxSaut, StringFormat=\{0:0.00\}}"/></TextBlock>
+        <UniformGrid Rows="10" VerticalAlignment="Stretch" HorizontalAlignment="center" >
+            <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15" Text="{Binding myElementa.GradMaxSaut, StringFormat=\{0:0.00\}}"/>
+            <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15" Text="{Binding myElementa.GradSaut4, StringFormat=\{0:0.00\}}"/>
+            <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15" Text="{Binding myElementa.GradSaut3, StringFormat=\{0:0.00\}}"/>
+            <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15" Text="{Binding myElementa.GradSaut2, StringFormat=\{0:0.00\}}"/>
+            <TextBlock Margin="40,0,0,0" VerticalAlignment="Top" FontSize="15" Text="{Binding myElementa.GradSaut1, StringFormat=\{0:0.00\}}"/>
+            <TextBlock Margin="40,0,0,0" VerticalAlignment="Bottom" FontSize="15" Text="{Binding myElementa.GradSaut1, StringFormat=\{0:0.00\}}"/>
+            <TextBlock Margin="40,0,0,0" VerticalAlignment="Bottom" FontSize="15" Text="{Binding myElementa.GradSaut2, StringFormat=\{0:0.00\}}"/>
+            <TextBlock Margin="40,0,0,0" VerticalAlignment="Bottom" FontSize="15" Text="{Binding myElementa.GradSaut3, StringFormat=\{0:0.00\}}"/>
+            <TextBlock Margin="40,0,0,0" VerticalAlignment="Bottom" FontSize="15" Text="{Binding myElementa.GradSaut4, StringFormat=\{0:0.00\}}"/>
+            <TextBlock Margin="40,0,0,0" VerticalAlignment="Bottom" FontSize="15" Text="{Binding myElementa.GradMaxSaut, StringFormat=\{0:0.00\}}"/>
+        </UniformGrid>
+        
+        <Rectangle Width="2" VerticalAlignment="Stretch" HorizontalAlignment="Center" Fill="Black"/>
+        <Rectangle Height="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Fill="Black"/>
+        <Line X1="{Binding PlotX}" Y1="{Binding OriginY}" X2="{Binding PlotX}" Y2="{Binding OriginY}" Fill="Blue"  StrokeThickness="4"/>
 
-
-            </UniformGrid>
-
-        </Grid>
+    </Grid>
 </Window>
