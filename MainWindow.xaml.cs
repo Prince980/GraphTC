@@ -28,6 +28,7 @@ namespace GraphSPcopy
 
         
 
+        // Call the OnPropertyChanged method on the instance
         
         public MainWindow()
 
@@ -57,7 +58,6 @@ namespace GraphSPcopy
             {
                 get { return _gradSaut4; }
                 set { _gradSaut4 = value;
-                    OnPropertyChanged();
                 }
             }
 
@@ -65,7 +65,7 @@ namespace GraphSPcopy
             {
                 get { return _gradSaut3; }
                 set { _gradSaut3 = value;
-                    OnPropertyChanged();
+                    
                 }
             }
 
@@ -119,11 +119,12 @@ namespace GraphSPcopy
         Elementa myElementa = new Elementa();
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            var handler = PropertyChanged;
-            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        
     }
 }
 
